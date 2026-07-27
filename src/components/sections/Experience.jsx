@@ -14,7 +14,7 @@ export default function Experience() {
     <SectionWrapper id="experience">
       <SectionTitle title="Experience" subtitle="My professional journey so far" />
 
-      <div className="relative w-full flex flex-col gap-12">
+      <div className="relative w-full flex flex-col gap-15">
         {experienceData.map((exp) => (
           <motion.div
             key={exp.id}
@@ -24,7 +24,7 @@ export default function Experience() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="w-full"
           >
-            <div className={`rounded-2xl p-8 md:p-10 max-w-4xl mx-auto overflow-hidden transition-all duration-300 ${
+            <div className={`rounded-2xl overflow-hidden p-8 md:p-10 max-w-4xl mx-auto transition-all duration-300 ${
               isDark
                 ? 'bg-white/5 border border-white/10 hover:border-primary-500/20'
                 : 'bg-white border border-gray-200 hover:shadow-lg'
