@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+/* ===== Custom Theme Configuration ===== */
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+
+  --color-neon-blue: #00d4ff;
+  --color-neon-purple: #b400ff;
+  --color-neon-pink: #ff00ea;
+  --color-neon-green: #00ff88;
+
+  --color-surface-dark: #0a0a0f;
+  --color-surface-dark-2: #12121a;
+  --color-surface-dark-3: #1a1a2e;
+  --color-surface-light: #f8fafc;
+  --color-surface-light-2: #f1f5f9;
+  --color-surface-light-3: #e2e8f0;
+
+  --color-glass-dark: rgba(255, 255, 255, 0.05);
+  --color-glass-light: rgba(255, 255, 255, 0.6);
+  --color-glass-border-dark: rgba(255, 255, 255, 0.1);
+  --color-glass-border-light: rgba(0, 0, 0, 0.1);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-gradient: gradient-shift 8s ease infinite;
+  --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+}
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary-500) transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}
+
+/* Dark mode body */
+.dark body {
+  background-color: var(--color-surface-dark);
+  color: #e2e8f0;
+}
+
+/* Light mode body */
+.light body {
+  background-color: var(--color-surface-light);
+  color: #1e293b;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--color-primary-500);
+  color: white;
+}
+
+/* Custom Scrollbar (Webkit) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-500);
+  border-radius: 9999px;
+}
+
+/* ===== Glassmorphism Utilities ===== */
+.glass-dark {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Gradient Text ===== */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary-400), var(--color-accent-500), var(--color-neon-blue));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* ===== Neon Glow Effect ===== */
+.neon-glow {
+  box-shadow:
+    0 0 5px var(--color-primary-500),
+    0 0 20px rgba(99, 102, 241, 0.3),
+    0 0 40px rgba(99, 102, 241, 0.1);
+}
+
+.text-neon {
+  text-shadow:
+    0 0 10px var(--color-primary-400),
+    0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+/* ===== Animated Border ===== */
+.animated-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(from 0deg,
+      var(--color-primary-500),
+      var(--color-accent-500),
+      var(--color-neon-blue),
+      var(--color-primary-500));
+  border-radius: inherit;
+  animation: spin 4s linear infinite;
+  z-index: -1;
+}
+
+.animated-border::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* ===== Keyframes ===== */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px var(--color-primary-500), 0 0 10px rgba(99, 102, 241, 0.3);
+  }
+
+  to {
+    box-shadow: 0 0 15px var(--color-primary-500), 0 0 30px rgba(99, 102, 241, 0.5);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ===== Section Styling ===== */
+.section-padding {
+  padding: 6rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 8rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 10rem 5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-padding {
+    padding: 10rem 6rem;
+  }
+}
+
+/* ===== Swiper Custom Styles ===== */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-primary-400) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary-500) !important;
+}
