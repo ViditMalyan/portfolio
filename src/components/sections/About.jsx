@@ -113,10 +113,10 @@ export default function About() {
 
       {/* Tech Stack */}
       <div>
-        <h3 className={`text-2xl lg:text-3xl translate-y-12 font-bold font-display text-center mt-8 mb-14 ${isDark ? 'text-white/90' : 'text-gray-800'}`}>
+        <h3 className={`text-2xl lg:text-3xl font-bold font-display text-center mt-8 mb-14 ${isDark ? 'text-white/90' : 'text-gray-800'}`} style={{ transform: 'translateY(3rem)' }}>
           Technologies I Work With
         </h3>
-        <div className="grid grid-cols-3 translate-y-25 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9 gap-6 md:gap-8">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9 gap-4 sm:gap-6 md:gap-8" style={{ transform: 'translateY(6.25rem)' }}>
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
@@ -136,7 +136,7 @@ export default function About() {
               }`}
             >
               <skill.icon
-                className="text-3xl sm:text-4xl md:text-5xl h-10 w-10 sm:h-14 sm:w-14 md:h-20 md:w-20 transition-all duration-300"
+                className="text-xl sm:text-4xl md:text-5xl h-7 w-7 sm:h-14 sm:w-14 md:h-20 md:w-20 transition-all duration-300"
                 style={{
                   color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.5)',
                 }}
