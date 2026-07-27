@@ -30,7 +30,7 @@ export default function Experience() {
                 : 'bg-white border border-gray-200 hover:shadow-lg'
             }`}>
               <div className="flex items-center justify-between mb-4">
-                <div className={`inline-block px-3 py-1 translate-x-2 rounded-full text-xs font-medium ${
+                <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
                   isDark ? 'bg-primary-500/20 text-primary-300' : 'bg-primary-100 text-primary-700'
                 }`}>
                   {exp.type}
@@ -58,7 +58,7 @@ export default function Experience() {
                 {exp.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className={`text-xs md:text-sm translate-x-4 px-3 md:px-4 py-1 md:py-1.5 rounded-xl font-mono ${
+                    className={`text-xs md:text-sm px-3 md:px-4 py-1 md:py-1.5 rounded-xl font-mono ${
                       isDark ? 'bg-white/5 text-white/60' : 'bg-gray-100 text-gray-600'
                     }`}
                   >

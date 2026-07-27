@@ -29,12 +29,12 @@ export default function SectionWrapper({ children, id, className = '' }) {
  */
 export function SectionTitle({ title, subtitle }) {
   return (
-    <div className="text-center mb-20">
-      <h2 className="text-4xl md:text-6xl lg:text-7xl -translate-y-8 font-bold font-display gradient-text inline-block mb-6">
+    <div className="text-center -translate-y-6 mb-20">
+      <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display gradient-text inline-block mb-6">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg md:text-xl pb-3 -translate-y-4 opacity-70 max-w-full mx-auto">
+        <p className="text-lg translate-y-2 md:text-xl pb-3 opacity-70 max-w-full mx-auto">
           {subtitle}
         </p>
       )}

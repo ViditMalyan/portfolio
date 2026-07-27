@@ -14,7 +14,7 @@ export default function SocialLinks() {
     <SectionWrapper id="social">
       <SectionTitle title="Connect With Me" subtitle="Find me across the web" />
 
-      <div className="flex flex-wrap justify-center gap-12 translate-y-8 max-w-full mx-auto">
+      <div className="flex flex-wrap justify-center gap-12 mt-8 max-w-full mx-auto">
         {socialLinksData.map((social, index) => (
           <motion.a
             key={social.name}
@@ -51,7 +51,7 @@ export default function SocialLinks() {
             aria-label={`Visit ${social.name}`}
           >
             <social.icon
-              className={`text-2xl md:text-3xl h-50 transition-colors duration-300 ${
+              className={`text-2xl md:text-3xl transition-colors duration-300 ${
                 isDark ? 'text-white/60' : 'text-gray-500'
               }`}
             />

@@ -64,7 +64,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className={`text-sm md:text-base font-mono tracking-widest uppercase mb-4 ${
+          className={`text-sm md:text-base font-mono tracking-widest uppercase mb-6 ${
             isDark ? 'text-primary-400' : 'text-primary-600'
           }`}
         >
@@ -76,7 +76,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl translate-y-6 md:text-7xl lg:text-8xl font-bold font-display mb-4"
+          className="text-5xl translate-y-3 mt-8 md:text-7xl lg:text-8xl font-bold font-display mb-6"
         >
           Hi, I'm{' '}
           <span className="gradient-text">{personalInfo.name}</span>
@@ -87,7 +87,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className={`text-xl translate-y-8 md:text-2xl lg:text-3xl font-medium mb-6 ${
+          className={`text-xl translate-y-5 mt-6 md:text-2xl lg:text-3xl font-medium mb-8 ${
             isDark ? 'text-white/70' : 'text-gray-600'
           }`}
         >
@@ -114,7 +114,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className={`text-base translate-y-12 md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed ${
+          className={`text-base translate-y-5 mt-8 md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed ${
             isDark ? 'text-white/50' : 'text-gray-500'
           }`}
         >
@@ -126,7 +126,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10"
         >
           {/* Resume Download */}
           <motion.a
@@ -136,13 +136,13 @@ export default function Hero() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(99, 102, 241, 0.4)' }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-8 py-4 w-45 translate-y-20 rounded-2xl font-semibold text-white overflow-hidden flex items-center gap-2"
+            className="group translate-y-10 relative px-8 py-4 w-auto rounded-2xl font-semibold text-white overflow-hidden flex items-center gap-2"
             style={{
               background: 'linear-gradient(135deg, #6366f1, #a855f7)',
             }}
           >
             <span className="relative z-10 flex items-center gap-2">
-              <HiDownload className="text-lg translate-x-1" />
+              <HiDownload className="text-lg" />
               Download Resume
             </span>
             <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -153,13 +153,13 @@ export default function Hero() {
             onClick={scrollToContact}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`px-8 py-6 w-35 rounded-2xl translate-y-20 font-semibold flex items-center gap-2 transition-all duration-300 ${
+            className={`px-8 py-4 w-auto translate-y-10 rounded-2xl font-semibold flex items-center gap-2 transition-all duration-300 ${
               isDark
                 ? 'border border-white/20 text-white hover:bg-white/10 hover:border-white/40'
                 : 'border border-gray-300 text-gray-800 hover:bg-gray-100 hover:border-gray-400'
             }`}
           >
-            <HiMail className="text-lg translate-x-1" />
+            <HiMail className="text-lg" />
             Get in Touch
           </motion.button>
         </motion.div>
@@ -169,7 +169,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, y: [0, 10, 0] }}
           transition={{ opacity: { delay: 1.5 }, y: { duration: 2, repeat: Infinity } }}
-          className="absolute bottom-8 left-1/2 translate-y-45 -translate-x-1/2"
+          className="absolute translate-y-50 bottom-8 left-1/2 -translate-x-1/2"
         >
           <div className={`w-6 h-10 rounded-full border-2 flex items-start justify-center p-1.5 ${
             isDark ? 'border-white/20' : 'border-gray-400'

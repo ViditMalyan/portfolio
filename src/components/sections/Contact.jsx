@@ -78,12 +78,12 @@ export default function Contact() {
     <SectionWrapper id="contact">
       <SectionTitle title="Get In Touch" subtitle="Have a project in mind? Let's talk about it." />
 
-      <div className="w-full h-180 max-w-full mx-auto">
+      <div className="w-full max-w-full mx-auto">
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-6" noValidate>
           <div className="grid sm:grid-cols-2 gap-6">
             {/* Name */}
             <div>
-              <label className={`text-base md:text-lg translate-y-3 font-medium mb-3 block ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
+              <label className={`text-base md:text-lg font-medium mb-3 block ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
                 <HiUser className="inline mr-1" /> Name
               </label>
               <input
@@ -92,14 +92,14 @@ export default function Contact() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="  Your name"
-                className={`${inputClass('name')} translate-y-3`}
+                className={inputClass('name')}
               />
-              {errors.name && <p className="text-red-400 text-xs translate-y-3 mt-1">{errors.name}</p>}
+              {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
             </div>
 
             {/* Email */}
             <div>
-              <label className={`text-base md:text-lg translate-y-3 font-medium mb-3 block ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
+              <label className={`text-base md:text-lg font-medium mb-3 block ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
                 <HiMail className="inline mr-1" /> Email
               </label>
               <input
@@ -108,15 +108,15 @@ export default function Contact() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="  you@example.com"
-                className={`${inputClass('email')} translate-y-3`}
+                className={inputClass('email')}
               />
-              {errors.email && <p className="text-red-400 text-xs mt-1 translate-y-3">{errors.email}</p>}
+              {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
             </div>
           </div>
 
           {/* Subject */}
           <div>
-            <label className={`text-base md:text-lg translate-y-4 font-medium mb-3 block ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
+            <label className={`text-base md:text-lg font-medium mb-3 block ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
               <HiChat className="inline mr-1" /> Subject
             </label>
             <input
@@ -125,14 +125,14 @@ export default function Contact() {
               value={form.subject}
               onChange={handleChange}
               placeholder="  Project inquiry"
-              className={`${inputClass('subject')} translate-y-4`}
+              className={inputClass('subject')}
             />
-            {errors.subject && <p className="text-red-400 translate-y-4 text-xs mt-1">{errors.subject}</p>}
+            {errors.subject && <p className="text-red-400 text-xs mt-1">{errors.subject}</p>}
           </div>
 
           {/* Message */}
           <div>
-            <label className={`text-base md:text-lg translate-y-5 font-medium mb-3 block ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
+            <label className={`text-base md:text-lg font-medium mb-3 block ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
               ✉ Message
             </label>
             <textarea
@@ -141,9 +141,9 @@ export default function Contact() {
               onChange={handleChange}
               placeholder="  Tell me about your project..."
               rows={8}
-              className={`${inputClass('message')} translate-y-6 resize-none`}
+              className={`${inputClass('message')} resize-none`}
             />
-            {errors.message && <p className="text-red-400 translate-y-6 text-xs mt-1">{errors.message}</p>}
+            {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
           </div>
 
           {/* Submit button */}
@@ -152,7 +152,7 @@ export default function Contact() {
             disabled={status === 'loading'}
             whileHover={{ scale: 1.02, boxShadow: '0 0 25px rgba(99, 102, 241, 0.3)' }}
             whileTap={{ scale: 0.98 }}
-            className="w-full py-10 md:py-8 h-15 rounded-3xl translate-y-15 font-semibold text-2xl md:text-2xl text-white flex items-center justify-center gap-5 disabled:opacity-60 transition-all"
+            className="w-full py-5 md:py-5 rounded-3xl font-semibold text-2xl md:text-2xl text-white flex items-center justify-center gap-5 disabled:opacity-60 transition-all"
             style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)' }}
           >
             <AnimatePresence mode="wait">
@@ -182,7 +182,7 @@ export default function Contact() {
         </form>
 
         {/* Email fallback */}
-        <p className={`text-center text-sm md:text-base translate-y-20 ${isDark ? 'text-white/40' : 'text-gray-400'}`}>
+        <p className={`text-center text-sm md:text-base mt-8 ${isDark ? 'text-white/40' : 'text-gray-400'}`}>
           Or reach me directly at{' '}
           <a href={`mailto:${personalInfo.email}`} className="text-primary-400 hover:underline">
             {personalInfo.email}

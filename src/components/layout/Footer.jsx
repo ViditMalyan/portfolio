@@ -33,7 +33,7 @@ export default function Footer() {
           onClick={scrollToTop}
           whileHover={{ y: -5, scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className={`p-4 rounded-full transition-all mb-20 ${
+          className={`p-4 rounded-full transition-all mb-8 ${
             isDark
               ? 'bg-white/10 text-white/60 hover:bg-white/15 hover:text-white border border-white/10'
               : 'bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-800 shadow-md'
