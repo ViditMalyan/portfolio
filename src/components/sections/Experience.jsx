@@ -44,7 +44,7 @@ export default function Experience() {
                 style={{ boxShadow: '0 0 12px rgba(99, 102, 241, 0.4)' }}
               /> */}
 
-              <div className={`rounded-3xl md:translate-x-70 translate-y-10 h-160 w-280 p-10 md:p-12 transition-all duration-300 ${
+              <div className={`rounded-3xl md:translate-x-75 translate-y-10 h-160 w-280 p-10 md:p-12 transition-all duration-300 ${
                 isDark
                   ? 'bg-white/5 border border-white/10 hover:border-primary-500/20'
                   : 'bg-white border border-gray-200 hover:shadow-lg'
