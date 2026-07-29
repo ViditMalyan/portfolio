@@ -73,6 +73,9 @@ function ProjectModal({ project, onClose }) {
           <div className="absolute inset-0 flex items-center justify-center">
             <HiCode className="text-6xl opacity-20" />
           </div>
+          {project.coverImage && (
+            <img src={project.coverImage} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+          )}
           {/* Image carousel if screenshots exist */}
           {project.screenshots && project.screenshots.length > 0 && (
             <Swiper
@@ -252,6 +255,9 @@ function ProjectCard({ project, onClick, index }) {
           <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-50 transition-opacity duration-300">
             <HiCode className="text-5xl text-white" />
           </div>
+          {project.coverImage && (
+            <img src={project.coverImage} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+          )}
           {/* Featured badge */}
           {project.featured && (
             <span className="absolute top-3 right-3 px-3 py-1 text-xs font-medium rounded-full bg-white/20 backdrop-blur-sm text-white">
