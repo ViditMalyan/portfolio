@@ -1,7 +1,3 @@
-# 🚀 Modern Interactive Portfolio
-
-A premium, Awwwards-style single-page portfolio built with **React + Vite**, featuring smooth animations, glassmorphism, dark/light themes, and interactive sections.
-
 ## ✨ Features
 
 - **Dark/Light Theme** with system detection & localStorage persistence
