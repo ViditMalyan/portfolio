@@ -6,12 +6,14 @@ import CL1 from "../assets/Cl1/CL1.png";
 import CL2 from "../assets/Cl1/CL2.png";
 import CL3 from "../assets/Cl1/CL3.png";
 import CL4 from "../assets/Cl1/CL4.png";
-import CLC from "../assets/Cl1/CLC.png";
+// import CLC from "../assets/Cl1/CLC.png";
+import CLCC from "../assets/Cl1/CLCC.png";
 import ES_Cov from "../assets/Estate/ES_Cov.png";
 import Es2 from "../assets/Estate/Es2.png";
 import Es3 from "../assets/Estate/Es3.png";
 import Es4 from "../assets/Estate/Es4.png";
 import Es5 from "../assets/Estate/Es5.png";
+import Cab from "../assets/Cabbooking/Cab.webp";
 
 const projects = [
   {
@@ -21,7 +23,7 @@ const projects = [
       "Full-stack ride-hailing application featuring real-time driver matching, live GPS tracking, and secure OTP verification.",
     detailedDescription:
       "A comprehensive, full-stack ride-hailing platform built to connect passengers with drivers in real-time. The application features dual user roles (Users and Captains/Drivers) with JWT-based protected workflows. It integrates location services for route distance calculations, fare estimation across multiple vehicle tiers, real-time WebSocket communication for live ride dispatching, and OTP-secured trip completion.",
-    coverImage: null,
+    coverImage: Cab,
     screenshots: [],
     videoUrl: null,
     techStack: [
@@ -175,8 +177,8 @@ const projects = [
       "Interactive, award-winning website replica featuring high-performance smooth scrolling and complex GSAP scroll-triggered animations.",
     detailedDescription:
       "A meticulous reconstruction of the award-winning Significo website, built to master advanced frontend animation architectures, kinetic typography, and fluid user interactions. The project focuses on translating complex design motion into production-ready web interfaces, utilizing smooth scrolling engines and custom scroll-driven timelines to deliver an immersive digital experience.",
-    coverImage: CLC,
-    screenshots: [CLC, CL1, CL2, CL3, CL4],
+    coverImage: CLCC,
+    screenshots: [CLCC, CL1, CL2, CL3, CL4],
     videoUrl: null,
     techStack: [
       "JavaScript (ES6+)",

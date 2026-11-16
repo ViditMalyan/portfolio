@@ -15,6 +15,8 @@ export default function Hero() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const resumeUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${(personalInfo.resumeUrl || 'ViditMalyanSoftwareEngineer.pdf').replace(/^\//, '')}`;
+
   return (
     <section
       id="hero"
@@ -130,7 +132,7 @@ export default function Hero() {
         >
           {/* Resume Download */}
           <motion.a
-            href={`${import.meta.env.BASE_URL}ViditMalyan.pdf`}
+            href={resumeUrl}
             download="ViditMalyan-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"

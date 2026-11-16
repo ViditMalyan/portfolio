@@ -11,7 +11,7 @@ const personalInfo = {
   detailedBio: "With a strong foundation in computer science and a deep passion for software engineering, I specialize in building high-performance web applications. I enjoy exploring new technologies, contributing to open source, and continuously pushing the boundaries of what's possible on the web. My approach combines technical excellence with creative problem-solving to deliver solutions that make a real impact.",
   email: "viditmalyan@gmail.com",
   location: "India",
-  resumeUrl: "/ViditMalyan.pdf",
+  resumeUrl: "/ViditMalyanSoftwareEngineer.pdf",
   avatarUrl: "null", // Will use placeholder
   yearsOfExperience: 2,
   projectsCompleted: 12,

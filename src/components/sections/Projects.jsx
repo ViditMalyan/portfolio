@@ -268,19 +268,19 @@ function ProjectCard({ project, onClick, index }) {
 
         {/* Card content */}
         <div className="p-6 md:p-8">
-          <h3 className="text-xl md:text-2xl font-bold font-display mb-3 group-hover:text-primary-400 transition-colors">
+          <h3 className="text-xl md:text-2xl translate-x-0.5 font-bold font-display mb-3 group-hover:text-primary-400 transition-colors">
             {project.title}
           </h3>
-          <p className={`text-sm md:text-base mb-4 line-clamp-2 ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
+          <p className={`text-sm md:text-base translate-x-0.5 mb-4 line-clamp-2 ${isDark ? 'text-white/60' : 'text-gray-500'}`}>
             {project.shortDescription}
           </p>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-1.5 mb-4">
+          <div className="flex flex-wrap translate-x-1 gap-1.5 mb-4">
             {project.tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className={`text-[10px] px-2 py-0.5 rounded-full ${
+                className={`text-[10px] px-2 py-1 rounded-full ${
                   isDark ? 'bg-white/5 text-white/50' : 'bg-gray-100 text-gray-500'
                 }`}
               >
@@ -290,11 +290,11 @@ function ProjectCard({ project, onClick, index }) {
           </div>
 
           {/* Tech stack */}
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap translate-x-1 gap-1.5">
             {project.techStack.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className={`text-[10px] px-2 py-0.5 rounded-lg font-mono ${
+                className={`text-[10px] px-2 py-1 rounded-lg font-mono ${
                   isDark ? 'bg-primary-500/10 text-primary-300' : 'bg-primary-50 text-primary-600'
                 }`}
               >
